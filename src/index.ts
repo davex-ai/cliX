@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import { Command } from "commander"; 
 
-console.log("Hello from my CLI tool!");
-
 const program = new Command();
 
 program
@@ -16,6 +14,15 @@ program
   .action((name: string) => {
     console.log(`Hello, ${name}!`);
   });
+
+program
+  .command("sum <a> <b>")
+  .description("Add two numbers")
+  .action((a: string, b: string) => {
+    const result = Number(a) + Number(b);
+    console.log(`${a} + ${b} = ${result}`);
+  });
+
 
 program.parse(process.argv);
 

@@ -1,7 +1,7 @@
 {
   "name": "clix",
   "version": "1.0.0",
-  "type": "module",  
+  "type": "commonjs",  
   "main": "index.js",
   "bin": {
     "clix": "./dist/index.js"

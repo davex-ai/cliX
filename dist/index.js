@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import { Command } from "commander";
-console.log("Hello from my CLI tool!");
-const program = new Command();
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const commander_1 = require("commander");
+const program = new commander_1.Command();
 program
     .name("clix")
     .description("My awesome CLI tool")
@@ -11,6 +12,13 @@ program
     .description("Greet someone")
     .action((name) => {
     console.log(`Hello, ${name}!`);
+});
+program
+    .command("sum <a> <b>")
+    .description("Add two numbers")
+    .action((a, b) => {
+    const result = Number(a) + Number(b);
+    console.log(`${a} + ${b} = ${result}`);
 });
 program.parse(process.argv);
 //src/index.ts
