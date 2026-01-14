@@ -1,5 +1,6 @@
 {
   "name": "clix",
+  "author": {"name": "Dave", "url": "https://github.com/davex-ai/cliX"},
   "version": "1.0.0",
   "type": "commonjs",  
   "main": "index.js",
