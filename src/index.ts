@@ -14,7 +14,7 @@ program
   .action((name: string) => {
     console.log(`Hello, ${name}!`);
   });
-
+m
 program
   .command("sum <a> <b>")
   .description("Add two numbers")
